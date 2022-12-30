@@ -71,7 +71,7 @@ function registerCmd(cmdObj){
 }
 
 async function registerConfig(){
-	let ct;
+	let ct = {};
 	if(fs.existsSync(ufoDir+'ufocfg.json')){
 		ct = JSON.parse(fs.readFileSync(ufoDir+'ufocfg.json')) || {};
 	}
