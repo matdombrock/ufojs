@@ -5,9 +5,9 @@ export default {
 		const {cd, $, fs, anzip, axios} = tools;
 
 		let zipo;
-		// if(args[0] === 'ufo'){
-		// 	args[0] = 'https://github.com/matdombrock/ufosciripts/archive/refs/heads/master.zip';
-		// }
+		if(args[0] === 'ufo'){
+			args[0] = 'https://github.com/matdombrock/ufojs-examples/archive/refs/heads/master.zip';
+		}
 		if(args[0]){
 	        const res = await axios.get(args[0],{responseType: 'arraybuffer'});
 	        fs.writeFileSync(ufo.ufoDir+'/temp.zip', res.data);
