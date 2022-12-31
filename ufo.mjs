@@ -180,7 +180,7 @@ async function main(){
 				platform
 			};
 			const tools = {
-				$, argv, cd, chalk, fs, question, fetch, echo
+				$, argv, cd, chalk, fs, question, fetch, echo,
 				prompt,
 				axios,
 				zip,
