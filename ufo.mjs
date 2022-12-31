@@ -3,10 +3,10 @@
 import os from "os";
 import path from "path";
 
-import { $, argv, cd, chalk, fs, question, fetch } from "zx";
+import { $, argv, cd, chalk, echo, fs, question, fetch } from "zx";
 
 import axios from 'axios';
-import anzip  from 'anzip';
+import zip  from 'adm-zip';
 
 import prompt from "./util/prompt.mjs";
 import searchDirectory from './util/searchDirectory.mjs';
@@ -180,10 +180,10 @@ async function main(){
 				platform
 			};
 			const tools = {
-				$, argv, cd, chalk, fs, question, fetch,
+				$, argv, cd, chalk, fs, question, fetch, echo
 				prompt,
 				axios,
-				anzip,
+				zip,
 				os,
 				path
 			}
