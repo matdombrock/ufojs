@@ -1,3 +1,7 @@
+
+const repo = {
+	'examples':'https://github.com/matdombrock/ufojs-examples/archive/refs/heads/master.zip'
+}
 export default {
 	cmd: 'install',
 	help: 'install https://<url>.zip - Installs scripts from a remote zip file',
@@ -5,8 +9,8 @@ export default {
 		const {cd, $, fs, anzip, axios} = tools;
 
 		let zipo;
-		if(args[0] === 'examples'){
-			args[0] = 'https://github.com/matdombrock/ufojs-examples/archive/refs/heads/master.zip';
+		if(repo[args[0]]){
+			args[0] = repo[args[0]];
 		}
 		if(args[0]){
 	        const res = await axios.get(args[0],{responseType: 'arraybuffer'});
